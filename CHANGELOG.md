@@ -4,7 +4,7 @@
 
 <section class="release" id="unreleased">
 
-## Unreleased (2026-06-24)
+## Unreleased (2026-07-14)
 
 <section class="bug-fixes">
 
@@ -34,6 +34,7 @@ This release closes the following issue:
 
 <details>
 
+-   [`c285e1d`](https://github.com/stdlib-js/stdlib/commit/c285e1df2a4371a82fb047157742756c1f4c2632) - **refactor:** add support for enums in `blas/base/ssyr2` [(#13434)](https://github.com/stdlib-js/stdlib/pull/13434) _(by Kaustubh Patange)_
 -   [`95a8c41`](https://github.com/stdlib-js/stdlib/commit/95a8c41a2a5313aea289e722bed88bc888454233) - **fix:** use correct argument value in error message and propagate JSDoc fixes to sibling packages [(#12302)](https://github.com/stdlib-js/stdlib/pull/12302) _(by Philipp Burckhardt)_
 -   [`9d5c961`](https://github.com/stdlib-js/stdlib/commit/9d5c9618fc710cf8f4c5ada77277f2af48f797b3) - **chore:** fix JavaScript lint errors [(#11277)](https://github.com/stdlib-js/stdlib/pull/11277) _(by Mandeep2333)_
 -   [`ce9806d`](https://github.com/stdlib-js/stdlib/commit/ce9806d70a5ca2d24fc81930a0bd84a58203769e) - **bench:** refactor to use string interpolation in `blas/base/ssyr2` [(#10460)](https://github.com/stdlib-js/stdlib/pull/10460) _(by Lokesh Ranjan)_
@@ -48,8 +49,9 @@ This release closes the following issue:
 
 ### Contributors
 
-A total of 3 people contributed to this release. Thank you to the following contributors:
+A total of 4 people contributed to this release. Thank you to the following contributors:
 
+-   Kaustubh Patange
 -   Lokesh Ranjan
 -   Mandeep2333
 -   Philipp Burckhardt
