@@ -4,7 +4,7 @@
 
 <section class="release" id="unreleased">
 
-## Unreleased (2026-09-26)
+## Unreleased (2026-10-13)
 
 <section class="bug-fixes">
 
@@ -34,6 +34,7 @@ This release closes the following issue:
 
 <details>
 
+-   [`1f923e3`](https://github.com/stdlib-js/stdlib/commit/1f923e38c3e5b4c00bde76e050f015d10670d51c) - **chore:** clean-up [(#16091)](https://github.com/stdlib-js/stdlib/pull/16091) _(by Philipp Burckhardt)_
 -   [`c285e1d`](https://github.com/stdlib-js/stdlib/commit/c285e1df2a4371a82fb047157742756c1f4c2632) - **refactor:** add support for enums in `blas/base/ssyr2` [(#13434)](https://github.com/stdlib-js/stdlib/pull/13434) _(by Kaustubh Patange)_
 -   [`95a8c41`](https://github.com/stdlib-js/stdlib/commit/95a8c41a2a5313aea289e722bed88bc888454233) - **fix:** use correct argument value in error message and propagate JSDoc fixes to sibling packages [(#12302)](https://github.com/stdlib-js/stdlib/pull/12302) _(by Philipp Burckhardt)_
 -   [`9d5c961`](https://github.com/stdlib-js/stdlib/commit/9d5c9618fc710cf8f4c5ada77277f2af48f797b3) - **chore:** fix JavaScript lint errors [(#11277)](https://github.com/stdlib-js/stdlib/pull/11277) _(by Mandeep2333)_
