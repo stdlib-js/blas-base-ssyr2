@@ -35,32 +35,14 @@ limitations under the License.
 
 > Perform the symmetric rank 2 operation `A = α*x*y^T + α*y*x^T + A`.
 
-<section class="installation">
 
-## Installation
-
-```bash
-npm install @stdlib/blas-base-ssyr2
-```
-
-Alternatively,
-
--   To load the package in a website via a `script` tag without installation and bundlers, use the [ES Module][es-module] available on the [`esm`][esm-url] branch (see [README][esm-readme]).
--   If you are using Deno, visit the [`deno`][deno-url] branch (see [README][deno-readme] for usage intructions).
--   For use in Observable, or in browser/node environments, use the [Universal Module Definition (UMD)][umd] build available on the [`umd`][umd-url] branch (see [README][umd-readme]).
-
-The [branches.md][branches-url] file summarizes the available branches and displays a diagram illustrating their relationships.
-
-To view installation and usage instructions specific to each branch build, be sure to explicitly navigate to the respective README files on each branch, as linked to above.
-
-</section>
 
 <section class="usage">
 
 ## Usage
 
 ```javascript
-var ssyr2 = require( '@stdlib/blas-base-ssyr2' );
+import ssyr2 from 'https://cdn.jsdelivr.net/gh/stdlib-js/blas-base-ssyr2@esm/index.mjs';
 ```
 
 #### ssyr2( order, uplo, N, α, x, sx, y, sy, A, LDA )
@@ -68,7 +50,7 @@ var ssyr2 = require( '@stdlib/blas-base-ssyr2' );
 Performs the symmetric rank 2 operation `A = α*x*y^T + α*y*x^T + A`, where `α` is a scalar, `x` and `y` are `N` element vectors, and `A` is an `N` by `N` symmetric matrix.
 
 ```javascript
-var Float32Array = require( '@stdlib/array-float32' );
+import Float32Array from 'https://cdn.jsdelivr.net/gh/stdlib-js/array-float32@esm/index.mjs';
 
 var A = new Float32Array( [ 1.0, 2.0, 3.0, 2.0, 1.0, 2.0, 3.0, 2.0, 1.0 ] );
 var x = new Float32Array( [ 1.0, 2.0, 3.0 ] );
@@ -94,7 +76,7 @@ The function has the following parameters:
 The stride parameters determine how elements in the input arrays are accessed at runtime. For example, to iterate over every other element of `x`,
 
 ```javascript
-var Float32Array = require( '@stdlib/array-float32' );
+import Float32Array from 'https://cdn.jsdelivr.net/gh/stdlib-js/array-float32@esm/index.mjs';
 
 var A = new Float32Array( [ 1.0, 2.0, 3.0, 2.0, 1.0, 2.0, 3.0, 2.0, 1.0 ] );
 var x = new Float32Array( [ 1.0, 2.0, 3.0, 4.0, 5.0 ] );
@@ -109,7 +91,7 @@ Note that indexing is relative to the first index. To introduce an offset, use [
 <!-- eslint-disable stdlib/capitalized-comments -->
 
 ```javascript
-var Float32Array = require( '@stdlib/array-float32' );
+import Float32Array from 'https://cdn.jsdelivr.net/gh/stdlib-js/array-float32@esm/index.mjs';
 
 // Initial arrays...
 var x0 = new Float32Array( [ 0.0, 1.0, 1.0, 1.0 ] );
@@ -129,7 +111,7 @@ ssyr2( 'row-major', 'upper', 3, 1.0, x1, 1, y1, 1, A, 3 );
 Performs the symmetric rank 2 operation `A = α*x*y^T + α*y*x^T + A`, using alternative indexing semantics and where `α` is a scalar, `x` and `y` are `N` element vectors, and `A` is an `N` by `N` symmetric matrix.
 
 ```javascript
-var Float32Array = require( '@stdlib/array-float32' );
+import Float32Array from 'https://cdn.jsdelivr.net/gh/stdlib-js/array-float32@esm/index.mjs';
 
 var A = new Float32Array( [ 1.0, 2.0, 3.0, 2.0, 1.0, 2.0, 3.0, 2.0, 1.0 ] );
 var x = new Float32Array( [ 1.0, 2.0, 3.0 ] );
@@ -150,7 +132,7 @@ The function has the following additional parameters:
 While [`typed array`][mdn-typed-array] views mandate a view offset based on the underlying buffer, the offset parameters support indexing semantics based on starting indices. For example,
 
 ```javascript
-var Float32Array = require( '@stdlib/array-float32' );
+import Float32Array from 'https://cdn.jsdelivr.net/gh/stdlib-js/array-float32@esm/index.mjs';
 
 var A = new Float32Array( [ 1.0, 2.0, 3.0, 2.0, 1.0, 2.0, 3.0, 2.0, 1.0 ] );
 var x = new Float32Array( [ 1.0, 2.0, 3.0, 4.0, 5.0 ] );
@@ -180,10 +162,15 @@ ssyr2.ndarray( 'upper', 3, 1.0, x, -2, 4, y, 1, 0, A, 3, 1, 0 );
 
 <!-- eslint no-undef: "error" -->
 
-```javascript
-var discreteUniform = require( '@stdlib/random-array-discrete-uniform' );
-var ones = require( '@stdlib/array-ones' );
-var ssyr2 = require( '@stdlib/blas-base-ssyr2' );
+```html
+<!DOCTYPE html>
+<html lang="en">
+<body>
+<script type="module">
+
+import discreteUniform from 'https://cdn.jsdelivr.net/gh/stdlib-js/random-array-discrete-uniform@esm/index.mjs';
+import ones from 'https://cdn.jsdelivr.net/gh/stdlib-js/array-ones@esm/index.mjs';
+import ssyr2 from 'https://cdn.jsdelivr.net/gh/stdlib-js/blas-base-ssyr2@esm/index.mjs';
 
 var opts = {
     'dtype': 'float32'
@@ -204,6 +191,10 @@ console.log( A1 );
 
 ssyr2.ndarray( 'upper', 3, 1.0, x, 1, 0, y, 1, 0, A2, 3, 1, 0 );
 console.log( A2 );
+
+</script>
+</body>
+</html>
 ```
 
 </section>
@@ -212,166 +203,7 @@ console.log( A2 );
 
 <!-- C interface documentation. -->
 
-* * *
 
-<section class="c">
-
-## C APIs
-
-<!-- Section to include introductory text. Make sure to keep an empty line after the intro `section` element and another before the `/section` close. -->
-
-<section class="intro">
-
-</section>
-
-<!-- /.intro -->
-
-<!-- C usage documentation. -->
-
-<section class="usage">
-
-### Usage
-
-```c
-#include "stdlib/blas/base/ssyr2.h"
-```
-
-#### c_ssyr2( order, uplo, N, alpha, \*X, sx, \*Y, sy, \*A, LDA )
-
-Performs the symmetric rank 2 operation `A = α*x*y^T + α*y*x^T + A` where `α` is a scalar, `x` and `y` are `N` element vectors, and `A` is an `N` by `N` symmetric matrix.
-
-```c
-#include "stdlib/blas/base/shared.h"
-
-float A[] = { 1.0f, 2.0f, 3.0f, 2.0f, 1.0f, 2.0f, 3.0f, 2.0f, 1.0f };
-const float x[] = { 1.0f, 2.0f, 3.0f };
-const float y[] = { 1.0f, 2.0f, 3.0f };
-
-c_ssyr2( CblasColMajor, CblasUpper, 3, 1.0f, x, 1, y, 1, A, 3 );
-```
-
-The function accepts the following arguments:
-
--   **order**: `[in] CBLAS_LAYOUT` storage layout.
--   **uplo**: `[in] CBLAS_UPLO` specifies whether the upper or lower triangular part of the symmetric matrix `A` should be referenced.
--   **N**: `[in] CBLAS_INT` number of elements along each dimension of `A`.
--   **alpha**: `[in] float` scalar constant.
--   **X**: `[in] float*` first input array.
--   **strideX**: `[in] CBLAS_INT` stride length for `X`.
--   **Y**: `[in] float*` second input array.
--   **strideY**: `[in] CBLAS_INT` stride length for `Y`.
--   **A**: `[inout] float*` input matrix.
--   **LDA**: `[in] CBLAS_INT` stride of the first dimension of `A` (a.k.a., leading dimension of the matrix `A`).
-
-```c
-void c_ssyr2( const CBLAS_LAYOUT order, const CBLAS_UPLO uplo, const CBLAS_INT N, const float alpha, const float *X, const CBLAS_INT strideX, const float *Y, const CBLAS_INT strideY, float *A, const CBLAS_INT LDA )
-```
-
-<!-- lint disable maximum-heading-length -->
-
-#### c_ssyr2_ndarray( uplo, N, alpha, \*X, sx, ox, \*Y, sy, oy, \*A, sa1, sa2, oa )
-
-Performs the symmetric rank 2 operation `A = α*x*y^T + α*y*x^T + A`, using alternative indexing semantics and where `α` is a scalar, `x` and `y` are `N` element vectors, and `A` is an `N` by `N` symmetric matrix.
-
-```c
-#include "stdlib/blas/base/shared.h"
-
-float A[] = { 1.0f, 2.0f, 3.0f, 2.0f, 1.0f, 2.0f, 3.0f, 2.0f, 1.0f };
-const float x[] = { 1.0f, 2.0f, 3.0f };
-const float y[] = { 1.0f, 2.0f, 3.0f };
-
-c_ssyr2_ndarray( CblasUpper, 3, 1.0f, x, 1, 0, y, 1, 0, A, 3, 1, 0 );
-```
-
-The function accepts the following arguments:
-
--   **uplo**: `[in] CBLAS_UPLO` specifies whether the upper or lower triangular part of the symmetric matrix `A` should be referenced.
--   **N**: `[in] CBLAS_INT` number of elements along each dimension of `A`.
--   **alpha**: `[in] float` scalar constant.
--   **X**: `[in] float*` first input array.
--   **sx**: `[in] CBLAS_INT` stride length for `X`.
--   **ox**: `[in] CBLAS_INT` starting index for `X`.
--   **Y**: `[in] float` second input array.
--   **sy**: `[in] CBLAS_INT` stride length for `Y`.
--   **oy**: `[in] CBLAS_INT` starting index for `Y`.
--   **A**: `[inout] float*` input matrix.
--   **sa1**: `[in] CBLAS_INT` stride of the first dimension of `A`.
--   **sa2**: `[in] CBLAS_INT` stride of the second dimension of `A`.
--   **oa**: `[in] CBLAS_INT` starting index for `A`.
-
-```c
-void c_ssyr2_ndarray( const CBLAS_UPLO uplo, const CBLAS_INT N, const float alpha, const float *X, const CBLAS_INT strideX, const CBLAS_INT offsetX, const float *Y, CBLAS_INT strideY, const CBLAS_INT offsetY, float *A, const CBLAS_INT strideA1, const CBLAS_INT strideA2, const CBLAS_INT offsetA )
-```
-
-</section>
-
-<!-- /.usage -->
-
-<!-- C API usage notes. Make sure to keep an empty line after the `section` element and another before the `/section` close. -->
-
-<section class="notes">
-
-</section>
-
-<!-- /.notes -->
-
-<!-- C API usage examples. -->
-
-<section class="examples">
-
-### Examples
-
-```c
-#include "stdlib/blas/base/ssyr2.h"
-#include "stdlib/blas/base/shared.h"
-#include <stdio.h>
-
-int main( void ) {
-    // Define 3x3 symmetric matrices stored in row-major layout:
-    float A1[ 3*3 ] = {
-        1.0f, 2.0f, 3.0f,
-        2.0f, 1.0f, 2.0f,
-        3.0f, 2.0f, 1.0f
-    };
-
-    float A2[ 3*3 ] = {
-        1.0f, 2.0f, 3.0f,
-        2.0f, 1.0f, 2.0f,
-        3.0f, 2.0f, 1.0f
-    };
-
-    // Define `x` and `y` vectors:
-    const float x[ 3 ] = { 1.0f, 2.0f, 3.0f };
-    const float y[ 3 ] = { 1.0f, 2.0f, 3.0f };
-
-    // Specify the number of elements along each dimension of `A1` and `A2`:
-    const int N = 3;
-
-    // Perform the symmetric rank 2 operation `A = α*x*y^T + α*y*x^T + A`:
-    c_ssyr2( CblasColMajor, CblasUpper, N, 1.0f, x, 1, y, 1, A1, N );
-
-    // Print the result:
-    for ( int i = 0; i < N*N; i++ ) {
-        printf( "A1[ %i ] = %f\n", i, A1[ i ] );
-    }
-
-    // Perform the symmetric rank 2 operation `A = α*x*y^T + α*y*x^T + A` using alternative indexing semantics:
-    c_ssyr2_ndarray( CblasUpper, N, 1.0f, x, 1, 0, y, 1, 0, A2, N, 1, 0 );
-
-    // Print the result:
-    for ( int i = 0; i < N*N; i++ ) {
-        printf( "A2[ %i ] = %f\n", i, A2[ i ] );
-    }
-}
-```
-
-</section>
-
-<!-- /.examples -->
-
-</section>
-
-<!-- /.c -->
 
 <!-- Section for related `stdlib` packages. Do not manually edit this section, as it is automatically populated. -->
 
@@ -390,7 +222,7 @@ int main( void ) {
 
 ## Notice
 
-This package is part of [stdlib][stdlib], a standard library for JavaScript and Node.js, with an emphasis on numerical and scientific computing. The library provides a collection of robust, high performance libraries for mathematics, statistics, streams, utilities, and more.
+This package is part of [stdlib][stdlib], a standard library with an emphasis on numerical and scientific computing. The library provides a collection of robust, high performance libraries for mathematics, statistics, streams, utilities, and more.
 
 For more information on the project, filing bug reports and feature requests, and guidance on how to develop [stdlib][stdlib], see the main project [repository][stdlib].
 
