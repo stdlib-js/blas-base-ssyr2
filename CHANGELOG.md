@@ -4,7 +4,7 @@
 
 <section class="release" id="unreleased">
 
-## Unreleased (2026-10-13)
+## Unreleased (2026-11-03)
 
 <section class="bug-fixes">
 
@@ -34,6 +34,7 @@ This release closes the following issue:
 
 <details>
 
+-   [`78ad2fa`](https://github.com/stdlib-js/stdlib/commit/78ad2fa5dbb12ce808dec93197d5343745ff91b8) - **docs:** normalize trailing newlines in REPL help texts [(#16420)](https://github.com/stdlib-js/stdlib/pull/16420) _(by Philipp Burckhardt)_
 -   [`1f923e3`](https://github.com/stdlib-js/stdlib/commit/1f923e38c3e5b4c00bde76e050f015d10670d51c) - **chore:** clean-up [(#16091)](https://github.com/stdlib-js/stdlib/pull/16091) _(by Philipp Burckhardt)_
 -   [`c285e1d`](https://github.com/stdlib-js/stdlib/commit/c285e1df2a4371a82fb047157742756c1f4c2632) - **refactor:** add support for enums in `blas/base/ssyr2` [(#13434)](https://github.com/stdlib-js/stdlib/pull/13434) _(by Kaustubh Patange)_
 -   [`95a8c41`](https://github.com/stdlib-js/stdlib/commit/95a8c41a2a5313aea289e722bed88bc888454233) - **fix:** use correct argument value in error message and propagate JSDoc fixes to sibling packages [(#12302)](https://github.com/stdlib-js/stdlib/pull/12302) _(by Philipp Burckhardt)_
